@@ -1,0 +1,22 @@
+<ul class="list-group">
+    {{#each articles}}
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-sm-9">
+                    <h4 class="list-group-item-heading">
+                        <a href="{{ this.link }}">{{ this.title }}</a>
+                    </h4>
+                    <p class="list-group-item-text">{{ this.origin }}</p>
+                </div>
+                <div class="col-sm-3">
+                    <button type="submit" form="hidden-form-{{ this.id }}" class="btn btn-primary pull-right">Save</button>
+                    <form action="/articles" method="POST" id="hidden-form-{{ this.id }}" class="hidden-xs-up">
+                        <input type="hidden" name="title" value="{{ this.title }}"></input>
+                        <input type="hidden" name="link" value="{{ this.link }}"></input>
+                        <input type="hidden" name="origin" value="{{ this.origin }}"></input>
+                    </form>
+                </div>
+            </div>
+        </li>
+    {{/each}}
+</ul>
