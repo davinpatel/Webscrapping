@@ -2,7 +2,7 @@
 
 A Node.js & MongoDB webapp that web-scrapes news data from The NY Times and allows users to comment about what they have read. 
 
-#Functionality
+# Functionality
 
 On the backend, the app uses express to serve routes and mongoose to interact with a MongoDB database.
 
